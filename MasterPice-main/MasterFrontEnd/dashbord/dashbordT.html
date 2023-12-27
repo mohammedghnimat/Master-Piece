@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/edit.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsev.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+          *{
+    font-family: 'Montserrat', sans-serif;
+        }
+        .inp-upd {
+            display: none;
+            padding: 5px;
+            background: transparent;
+            border: 1px solid var(--bg-1);
+        }
+        .text-read {
+            display: block;
+        }
+        option  {
+            color: #000;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="editProfileForm" class="editProfileForm">
+        <input type="text" id="profileNameInput" placeholder="Enter Name">
+        <input type="email" id="profileEmailInput" placeholder="Enter Email">
+        <input type="password" id="profilePasswordInput" placeholder="Enter Password">
+        <button class="link-nav" type="submit" id="saveProfileChanges">Save</button>
+        <button class="link-nav" id="cancelProfileEdit">Close</button>
+    </form>
+    
+
+    <button id="btn-nav-open" class="btn-nav-open"><i class="fa-solid fa-bars"></i></button>
+    <div id="cont" class="container">
+        <div id="navbar" class="navbar">
+            <div class="div-img">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="li-p"> <a href="dashbord.html"> <span><i class="fa-solid fa-inbox"></i></span>Chart</a></li>
+                    <li class="li-p"> <a href="dashbordT.html"> <span><i class="fa-solid fa-person-chalkboard"></i></span>Teacher</a></li>
+                    <li  class="li-p"> <a href="dashbordS.html"><span><i class="fa-solid fa-graduation-cap"></i></span> Student</a></li>
+                    <li style="padding-bottom: 10px;" class="li-p"><a href="../calc.html"> <span><i class="fa-solid fa-calculator"></i></span> CALCULATOR</a></li>
+                         <div class="btn-all">
+                        <li style="margin-top: 20px;" class="btn-1"><a href="../index.html">Go to Home</a></li>
+                        <li style="margin-top: 20px;"><button class="btn-nav-openn" id="close-nav">Close</button></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="bd-all">
+           <div class="cont-filter">
+            <h2>All Teacher</h2>
+            <label>
+                <input type="search" id="searchInput" placeholder="Search...">
+                <button onclick="searchStudents()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </label>
+            <div>
+                <button id="adddd">ADD TEACHER</button>
+            </div>
+        </div>
+        <div class="brd">
+            <table id="customers">
+                <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Password</th>
+                      <th>Course</th>
+                      <th>DEL/UPD</th>
+                    </tr>
+                  
+                  </table>
+                      </div>
+        </div>
+    </div>
+    <div id="all" class="add">
+        <form id="addUserForm">
+    <h1>Add Teacher</h1>
+    <div class="src-text-vedio">
+        <h4>Name Teacher</h4>
+        <input id="name-st" class="inp" type="text" name="username">
+    </div>
+    <div class="src-text-vedio">
+        <h4>Email Teacher</h4>
+        <input id="email-em" class="inp" type="text" name="email">
+    </div>
+    <div class="src-text-vedio">
+        <h4>Password</h4>
+        <input id="pass-ps" class="inp" type="password" name="password">
+    </div>
+    <div class="src-text-vedio">
+        <h4>Course ID</h4>
+        <select id="course-id" class="inp" name="course"></select>
+    </div>
+    <button type="submit" id="button" class="button">Add Teacher</button>
+</form>
+
+        <div class="closeDiv">
+            <div></div>
+            <button id="ccccc">CLOSE</button>
+        </div>
+    </div>
+
+    <!-- <script src="edit.js"></script> -->
+    <script src="../js/dAT.js"></script>
+</body>
+</html>

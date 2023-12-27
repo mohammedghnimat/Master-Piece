@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/sign.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Upload Form</title>
+    <style>
+        :root {
+            --bg-1: #427D9D;
+            --bg-2: #06BBCC;
+            --bg-3: #9BBEC8;
+            --bg-4: #DDF2FD;
+        }
+        *{
+            margin: 0;
+            transition: 0.5s;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background: url(../img/wallpaper-login.png);
+        }
+
+        .cc {
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            width: 50%;
+            padding: 20px;
+            background: var(--bg-1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--bg-4);
+        }
+        .aa {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #00000076;
+
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label , .namev{
+            margin: 10px 0;
+            color: var(--bg-4);
+            border: 1px solid var(--bg-4);
+            padding: 20px;
+            cursor: pointer;
+            width: 200px;
+            text-align: center;
+        }
+        .namev{ 
+            cursor:default;
+            background: transparent;
+            outline: none;
+            font-size: 17px;
+            text-align: left;
+        }
+        .namev::placeholder {
+            color: var(--bg-4);
+            font-size: 17px;
+        }
+
+       
+    input[type="file"] {
+        padding: 8px;
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        appearance: none;
+        border: none;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        color: transparent;
+        display: none;
+    }
+
+        button {
+            padding: 10px;
+            background-color: var(--bg-2);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            color: var(--bg-2);
+            background-color:var(--bg-4);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./dashbordSt.html">Dashbord</a>
+            <a href="../index.html">
+            <img src="../img/logo.png">
+            </a>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <div class="aa">
+        <div class="cc">
+            <h2>Video Upload Form</h2>
+        
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="file">UPLOAD VEDIO
+
+                </label>
+                    <input style="display: none;" type="file" name="file" id="file" accept="video/*" required />
+                <input type="text" class="namev" name="coursename" placeholder="NAME VEDIO" id="coursename" required />
+        
+                <label for="course_pdf">Course PDF:</label>
+                <input type="file" name="course_pdf" id="course_pdf" accept="application/pdf" />
+        
+                <button type="button" onclick="uploadVideo()">Upload Video</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function uploadVideo() {
+            const form = document.getElementById("uploadForm");
+            const formData = new FormData(form);
+
+            fetch("http://localhost/MasterPiece/TeacherDashboard/CrudCourse/InsertCourse.php", {
+                method: "POST",
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Video uploaded successfully");
+                } else {
+                    alert("Error: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error uploading video. Please try again later.");
+            });
+        }
+    </script>
+</body>
+</html>

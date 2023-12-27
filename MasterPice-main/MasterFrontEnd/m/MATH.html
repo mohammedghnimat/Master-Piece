@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElEarning</title>
+    <style>
+        .aaaf {
+            display: flex;
+            justify-content: space-around;
+        }
+        .hide-button , .show-button {
+            cursor: pointer;
+        }
+        video {
+            padding-top: 20px;
+        }
+        .pdf-download {
+             color: var(--bg-1);
+             text-decoration: none;
+             margin-top: 40px;
+             background: var(--bg-5);
+             padding: 20px;
+             text-align: center;    
+             border-radius: 400px;
+        }
+        .cont-vedio {
+            border-radius: 20px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="border-radius: 20px;" class="navbar">
+            <div>
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="li-p"><a href="../index.html"><span><i class="fa-solid fa-house"></i></span>HOME</a></li>
+                    <li class="li-p"><a href="../cours.html"> <span><i class="fa-solid fa-graduation-cap"></i></span> COURSES</a></li>
+                    <li class="li-p"><a href="../index.html"> <span><i class="fa-solid fa-school"></i></span> ABOUT</a></li>
+                    <li class="li-p"><a href="../contact.html"><span><i class="fa-solid fa-blender-phone"></i>CONTACT</span></a></li>
+                    <li style="padding-bottom: 10px;" class="li-p"><a href="../calc.html"> <span><i class="fa-solid fa-calculator"></i></span> CALCULATOR</a></li>
+                    <div class="btn-all">
+                        <a id="LogOut" class="link-nav" style="margin-top: 3em;" href="../index.html">LogOut</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="body-all">
+                <div class="cont-vedio">
+                    <div class="bg">
+                            <div class="vedio-out">
+                                <div class="cont-all-vedio">
+                                    <h1>Math</h1>
+                                    <p>
+                                        Mathematics is a fundamental and essential subject in education, contributing to the development of logical and analytical thinking skills in students. 
+                                    </p>
+                                </div>
+                             <a class="show-button2" href="../cours.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                            </div>
+                    </div>
+                    <div id="customers">
+                      <a href=""></a>
+                    </div>
+                   
+                </div>
+            </div>
+            </div>
+            <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const eventContainer = document.querySelector('#customers');
+
+    // Read Video
+    fetch('http://localhost/MasterPiece/TeacherDashboard/CrudCourse/ReadCourses.php')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(course => {
+                if (course.courseID !== "4" && course.courseID !== "5") {
+                    const courseRow = document.createElement('div');
+                    courseRow.innerHTML +=
+                        `
+                        <div class="vedio-cont">
+                            <div class="hdr">
+                                <header class="hdr-vedio">
+                                    <h2>${course.coursename}</h2>
+                                    <a class="show-button"><i class="fa-solid fa-arrow-down-short-wide"></i></a>
+                                    <a class="hide-button"><i class="fa-solid fa-arrow-up-short-wide"></i></a>
+                                </header>
+                                <div class="vedio">
+                                    <video height="400px" width="100%" controls>
+                                        <source src="../dashbordTeacher/vedio/${course.course_video}" type="video/mp4">
+                                    </video>
+                                    <div class="aaaf">
+                                        <a class="pdf-download" href="../dashbordTeacher/pdf/${course.course_pdf}" download>Download Pdf Course</a>
+                                        <a class="pdf-download" href="./Quiz/Quiz.html">Start Quiz</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                    eventContainer.appendChild(courseRow);
+                }
+            });
+
+            const videos = document.querySelectorAll('.vedio');
+            const showButtons = document.querySelectorAll('.show-button');
+            const hideButtons = document.querySelectorAll('.hide-button');
+            showButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    videos[index].style.height = "auto";
+                    videos[index].style.padding = "20px"; 
+                    hideButtons[index].style.display = "flex";
+                    showButtons[index].style.display = "none";
+                });
+            });
+            hideButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    videos[index].style.height = "0";
+                    videos[index].style.padding = "0";
+                    hideButtons[index].style.display = "none";
+                    showButtons[index].style.display = "flex";
+                });
+            });
+            videos.forEach((video, index) => {
+                video.addEventListener('transitionend', () => {
+                    if (video.style.height !== "0px") {
+                        video.style.height = "auto";
+                    }
+                });
+            });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const LogOut = document.getElementById('LogOut');
+    LogOut.addEventListener('click', () => {
+        const isLoggedIn = sessionStorage.clear();
+    });
+});
+
+
+    </script>
+</body>
+</html>

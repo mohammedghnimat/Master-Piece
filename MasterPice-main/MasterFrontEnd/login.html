@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/sign.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>SignIn</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="signup.html">Sign Up</a>
+            <a href="index.html">
+            <img src="img/logo.png">
+            </a>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <div class="body">
+        <div class="cont-all-form">
+            <div class="form-container">
+                <p class="title">Login</p>
+                <form class="form">
+                    <div class="input-group">
+                        <label for="username">Email</label>
+                        <input type="text" name="text" id="email" placeholder="">
+                        <p class="error" id="email-error">Invalid email</p>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="">
+                        <p class="error" id="pass-error">Please enter 6 characters password and uppercase letter</p>
+                    </div>
+                    <p class="error" id="em-errr">All password or email is incorrect</p>
+                    <button class="sign">Sign In</button>
+                </form>
+                <p class="signup">Don't have an account?
+                    <a rel="noopener noreferrer" href="signup.html" class="">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+</html>

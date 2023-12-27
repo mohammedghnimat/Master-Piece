@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This article provides a list of the 10 best HTML tags for SEO, along with tips on how to use them effectively to improve your website's ranking in search results.">
+    <meta name="keywords" content="SEO, HTML tags, search engine optimization">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eEduMaster</title>
+    <style>
+          #btn-menu , #btn-close-menu{
+        display: none;
+       }
+         .aaaaa {
+            display: none;
+        }
+        @media (max-width:700px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 0px;
+                height: 100vh;
+                width: 100vw;
+                flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        }
+            nav ul {
+                margin-bottom: 0;
+                flex-direction: column;
+            }
+            nav li {
+                margin-top: 30px;
+                font-size: 25px;
+            }
+            nav ul img {
+            width: 80px;
+        }
+        
+        .aaaaa {
+            display: block;
+        }
+        .cont-section-one {
+    margin: 0em;
+    text-align: center;
+}
+.cont-section-one h1{
+    font-size: 40px;
+}
+.cont-section-one .btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.section-three {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    flex-direction: column;
+    align-items: center;
+}
+#btn-menu , #btn-close-menu {
+    display: block;
+    margin-top: 35px;
+    
+}
+.link-nav {
+    margin-left: 30px;
+
+}
+header {
+    background: transparent;
+    position: absolute;
+    top: -20px;
+}
+        }
+ 
+    </style>
+</head>
+<body>
+    <form style="border-radius: 10px;" class="editProfileForm" id="editProfileForm">
+    <input type="text" id="profileNameInput" placeholder="Enter Name">
+    <input type="email" id="profileEmailInput" placeholder="Enter Email">
+    <input type="password" id="profilePasswordInput" placeholder="Enter Password">
+    <button class="link-nav" type="submit" id="saveProfileChanges">Save</button>
+    <button class="link-nav" id="cancelProfileEdit">Cancel</button>
+</form>
+
+
+
+    <!-- Start Profile -->
+    <div style="z-index: 1;" id="profile" class="profile">
+        <div id="txt-d" class="text-profile">
+            <h4>Name : <span id="profileName"></span></h4>
+            <h4>Email : <span id="profileEmail"></span></h4>
+            <h4>Password : <span id="profilePassword"></span></h4>
+            <div class="btn-aa">
+                <button id="edit-pr" class="ccccc">Edit Profile</button>
+                <button id="closeProfile" class="ccccc">Close</button>
+            </div>
+        </div>
+        <div id="img" class="img">
+            <img src="img/pngtree-avatar-vector-icon-white-background-png-image_1870181.jpg" alt="user">
+        </div>
+    </div>
+<!-- End Profile -->
+    <div id="cont"  class="cont">
+  <!-- Start Navbat -->
+  <header id="header">
+    <span style="display: flex; justify-content: space-between;width: 97vw;">
+        <span></span>
+        <button id="btn-menu" class="link-nav"><i class="fa-solid fa-bars"></i></button>
+    </span>
+    <nav id="nav">
+        <a id="profile2" class="link-nav" href="#">Profile</a>
+        <a id="signup" class="link-nav" href="signup.html">Sign Up</a>
+        <ul style="margin-bottom: 0;">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#"><img src="img/logo.png" alt="Logo"></a></li>
+            <li><a href="./cours.html">COURSES</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+        <a id="login" class="link-nav" href="login.html">Login</a>
+        <a id="LogOut" class="link-nav" href="index.html">LogOut</a>
+            <div>
+    <button id="btn-close-menu" class="link-nav">Close</button>
+            </div>    
+    </nav>
+</header>
+
+<!-- End Navbat -->
+<!-- Start Section One -->
+<section class="section-one">
+    
+    <div class="bg-section-one">
+        <div class="cont-section-one">
+            <h1>WELCOME</h1>
+            <h3>THE BEST eLearing</h3>
+        <p>
+            This platform provides an extensive library of educational video clips along with comprehensive written courses available in PDF format
+        </p>
+        <div id="btn-n" class="btn2">
+            <a href="cours.html"  class="btn2-border">
+                JOIN NOW
+            </a>
+          </div>
+        </div>
+</div>
+
+</section>
+<!-- End Section One -->
+<!-- Start Section Two -->
+<section class="section-two">
+    <div class="card-container">
+        <div class="card">
+            <h1>
+                <i class="fa-solid fa-scroll"></i>
+                
+            </h1>
+            <h3>Certificate</h3>
+            <p>
+                There is a certificate on our website upon completing the quiz included in each video, and when solving the quiz it is necessary to answer all the questions correctly            </p>
+                
+            </div>
+        <div class="card">
+            <h1>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </h1>
+            <h3>Quizzes</h3>
+            <p>
+                On our website, there are quizzes with multiple questions
+            </p>
+        </div>
+        <div class="card">
+            <h1>
+                <i class="fa-solid fa-file-pdf"></i>
+            </h1>
+            <h3>PDF File</h3>
+            <p>
+                Our website has PDF files attached to each video of the books and podcasts            </p>
+        </div>
+        <div class="card">
+            <h1>
+                <i class="fa-solid fa-film"></i>
+            </h1>
+            <h3>Recorded Videos</h3>
+            <p>
+                We have illustrated and produced videos of the best ways to help the student in studying            </p>
+        </div>
+    </div>
+</section>
+<span id="about"></span>
+<!-- End Section Two -->
+<!-- Start Section Three -->
+<section style="align-items: center;" class="section-three">
+    <div class="img-about">
+        <img src="img/ImageAbout.jpg" alt="">
+    </div>
+    <div class="text-about">
+        <h5>ABOUT US
+
+            <i class="fa-solid fa-lines-leaning"></i>
+            <i class="fa-solid fa-lines-leaning"></i>
+        </h5>
+        <div class="text-ab">
+            <h2>
+                Welcome to eLEARNING
+            </h2>
+                <div>
+            <p>
+                The Educational Platform is an online educational platform aimed at empowering students to access high-quality educational resources anytime, anywhere. We strive to provide an excellent learning experience that meets the needs of both students and teachers.
+            </p>
+                </div>
+                <div>
+                    <p>
+                        Our mission is to provide an innovative and stimulating learning environment that enables students to realize their full potential. We believe that education should be accessible to all, and we work hard to make high-quality educational resources easily available and affordable.
+
+                    </p>
+                </div>
+        </div>
+        <div class="text-link">
+            <div class="link-left">
+                <p>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                    Skilled Instructors
+                </p>
+                <p>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                    International Certificate
+                </p>
+                <p>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                    Online Classes
+                </p>
+            </div>
+          <div class="link-right">
+            <p>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+                Skilled Instructors
+            </p>
+            <p>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+                International Certificate
+            </p>
+            <p>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+                Online Classes
+            </p>
+          </div>
+        </div>
+    </div>
+</section>
+<!-- End Section Three -->
+<!-- Start Section Four -->
+<section id="cours" class="container-xxl py-5 category">
+    <div class="containeAr">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Courses Categories</h2>
+        </div>
+        <div class="row g-3">
+            <div class="col-lg-7 col-md-6">
+                <div class="row g-3">
+                    <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                        <a class="position-relative d-block overflow-hidden" href="m/MATH.html">
+                            <img class="img-fluid" src="img/download.jpg" alt="math">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <h5 class="m-0">MATH</h5>
+                                <small class="text-primary"> Courses</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                        <a class="position-relative d-block overflow-hidden" href="cours.html">
+                            <img class="img-fluid" src="img/ph.jpg" alt="Physics">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <h5 class="m-0">PHYSICS</h5>
+                                <small class="text-primary">Courses</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                        <a class="position-relative d-block overflow-hidden" href="cours.html">
+                            <img class="img-fluid" src="img/bbb.jpg" alt="Biology">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <h5 class="m-0">BIOLOGY</h5>
+                                <small class="text-primary">Courses</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                <a class="position-relative d-block h-100 overflow-hidden" href="cours.html">
+                    <img class="img-fluid position-absolute w-100 h-100" src="img/cod.jpg" alt="coding" style="object-fit: cover;">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                        <h5 class="m-0">CODING</h5>
+                        <small class="text-primary">Courses</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Section Four -->
+<!-- Start Section Five -->
+<!-- <section class="section-five">
+    <h1 style="text-align: center;">OUR TEAM</h1>
+    <div class="card-container">
+        <div style="width: 40em;" class="card">
+            <h1>
+                <i class="fa-regular fa-user"></i> 
+           </h1>
+            <h3>Qusey Hammad</h3>
+            <h4>
+                Front End
+            </h4>
+        </div>
+        <div style="width: 40em;" class="card">
+            <h1>
+                <i class="fa-regular fa-user"></i>
+            </h1>
+            <h3>Mohammed Ghnimat                </h3>
+            <h4>
+                Back End
+            </h4>
+        </div>
+    </div>
+</section> -->
+<!-- End Section Five -->
+<!-- Start Footer -->
+<footer>
+        <div class="text-f-1">
+            <h3>eEduMaster</h3>
+            <p>
+                Thank you for your time on our platform. If you have any suggestions or comments on this site, contact us at the email listed here            </p>
+            <h6>&copy; eEduMaster </h6>
+        </div>
+        <div class="text-f-2">
+            <h3>Section :</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Our Team</a>
+        </div>
+        <div class="text-f-3">
+            <h3>Uses :</h3>
+            <a >Google Fonts</a>
+            <a>Font Awesome</a>
+            <a>Bootstrap</a>
+            <a>PHP</a>
+        </div>
+        <div class="text-f-4">
+            <h3>Login & Contact :</h3>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a>mohamedgnmt@gmail.com</a>
+            <a>quseyhammad@gmail.com</a>
+        </div>
+</footer>
+<!-- End Footer -->
+    </div>
+  
+    <script src="js/main.js"></script>
+    <script>
+        const btnMenu = document.getElementById('btn-menu')
+        const nav = document.getElementById('nav')
+        const btnn = document.getElementById('btn-n')
+        const btnClose = document.getElementById('btn-close-menu')
+        btnMenu.addEventListener('click' , ()=>{
+            nav.style.display = "flex"
+            btnn.style.display = "none"
+        })
+        btnClose.addEventListener('click' , ()=>{
+            nav.style.display = "none"
+            btnn.style.display = "block"
+        })
+        const profile4 = document.getElementById('profile')
+const img = document.getElementById('img')
+const txtD = document.getElementById('txt-d')
+const editPr = document.getElementById('edit-pr')
+const closeProfile = document.getElementById('closeProfile')
+
+
+const login = document.getElementById('login')
+const LogOut = document.getElementById('LogOut')
+const sign = document.getElementById('signup')
+const profile1 = document.getElementById('profile2')
+const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+const cont = document.getElementById('cont')
+
+const id = sessionStorage.getItem("id");
+const email = sessionStorage.getItem("email");
+const username = sessionStorage.getItem('username');
+
+if (isLoggedIn == 'true') {
+        login.style.display = "none"
+        sign.style.display = "none"
+        LogOut.style.display = "block"
+        profile1.style.display = "block"
+    }else {
+        login.style.display = "block"
+        sign.style.display = "block"
+        LogOut.style.display = "none"
+        profile1.style.display = "none"
+    }
+    LogOut.addEventListener('click' , ()=>{
+    const isLoggedIn = sessionStorage.clear();
+    const id = sessionStorage.clear();
+    const username = sessionStorage.clear();
+    const email = sessionStorage.clear();
+    
+    })
+
+    profile1.addEventListener('click' , ()=>{
+        txtD.style.display = "block"
+        img.style.display = "block"
+        profile4.style.display = "flex"
+        cont.style.filter = "blur(20px)"
+        closeProfile.style.display = "block"
+        editPr.style.display = "block"
+    })
+    closeProfile.addEventListener('click',()=>{
+        txtD.style.display = "none"
+        img.style.display = "none"
+        profile4.style.display = "none"
+        cont.style.filter = "blur(0px)"
+        closeProfile.style.display = "none"
+        editPr.style.display = "none"
+    })
+    document.addEventListener('DOMContentLoaded', function () {
+        const comp = {
+            // Add your component elements here
+            profileName: document.getElementById('profileName'),
+            profileEmail: document.getElementById('profileEmail'),
+            profilePassword: document.getElementById('profilePassword'),
+            profileCourse: document.getElementById('profileCourse'),
+        };
+
+        // Retrieve user data from sessionStorage
+        const userData = {
+            USERNAME: sessionStorage.getItem("username"),
+            EMAIL: sessionStorage.getItem("email"),
+            PASSWORD: sessionStorage.getItem("password"),
+            // Assuming you have a role stored in sessionStorage as well
+            ROLE: sessionStorage.getItem("role"),
+            COURSES: JSON.parse(sessionStorage.getItem("courses")), // Assuming courses are stored as an array
+        };
+
+        // Display user profile information
+        displayUserProfile(userData);
+
+        // Function to display user profile information
+        function displayUserProfile(userData) {
+            comp.profileName.textContent = userData.USERNAME;
+            comp.profileEmail.textContent = userData.EMAIL;
+            comp.profilePassword.textContent = "********"; // Display stars or a placeholder for the password
+
+            // Display courses relevant to the teacher
+            if (userData.ROLE === 'teacher') {
+                comp.profileCourse.textContent = userData.COURSES.join(', ');
+            } else {
+                comp.profileCourse.textContent = 'N/A';
+            }
+        }
+    });
+
+
+      function toggleEditMode() {
+        const profileName = document.getElementById('profileName');
+        const profileEmail = document.getElementById('profileEmail');
+        const profilePassword = document.getElementById('profilePassword');
+        const profileCourse = document.getElementById('profileCourse');
+        const editProfileForm = document.getElementById('editProfileForm');
+
+        profileName.style.display = 'none';
+        profileEmail.style.display = 'none';
+        profilePassword.style.display = 'none';
+        profileCourse.style.display = 'none';
+        editProfileForm.style.display = 'block';
+
+        // Populate input fields with existing data
+        document.getElementById('profileNameInput').value = profileName.textContent;
+        document.getElementById('profileEmailInput').value = profileEmail.textContent;
+        document.getElementById('profilePasswordInput').value = ''; // Assuming you don't want to display the password
+        document.getElementById('profileCourseInput').value = profileCourse.textContent;
+    }
+
+
+    // Event listener for the "Save" button in edit mode
+    document.getElementById('saveProfileChanges').addEventListener('click', () => {
+        // Get the updated values from the input fields
+        const newName = document.getElementById('profileNameInput').value;
+        const newEmail = document.getElementById('profileEmailInput').value;
+        const newPassword = document.getElementById('profilePasswordInput').value;
+
+        sessionStorage.removeItem("username");
+        sessionStorage.removeItem("email");
+        sessionStorage.removeItem("password");
+
+        sessionStorage.setItem('username' , newName)
+        sessionStorage.setItem('email' , newEmail)
+        sessionStorage.setItem('password' , newPassword)
+
+        alert('Updated successfully')
+        // Use the Fetch API to send the updated data to your server using the provided API endpoint
+        const apiUrl = 'http://localhost/MasterPiece/AdminDashboard/CrudStudent/UpdateStudent.php';
+        const requestData = {
+            UserID: sessionStorage.getItem('id'), // Replace with the actual user ID
+            Username: newName,
+            Email: newEmail,
+            Password: newPassword,
+            // Image: '', // You can add the image field if needed
+        };
+        console.log(requestData);
+
+        fetch(apiUrl, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response from the server, e.g., show a success message
+            console.log('Updated successfully:', data);
+        })
+        .catch(error => {
+            // Handle any errors that occurred during the fetch
+            console.error('Error updating data:', error);
+        });
+
+        // Hide the edit form and show the profile details with the updated data
+        const profileName = document.getElementById('profileName');
+        const profileEmail = document.getElementById('profileEmail');
+        const profilePassword = document.getElementById('profilePassword');
+        const profileCourse = document.getElementById('profileCourse');
+        const editProfileForm = document.getElementById('editProfileForm');
+
+        profileName.textContent = newName;
+        profileEmail.textContent = newEmail;
+        // Assuming you don't want to display the password
+        profilePassword.textContent = '********';
+        profileCourse.textContent = newCourse;
+
+        profileName.style.display = 'block';
+        profileEmail.style.display = 'block';
+        profilePassword.style.display = 'block';
+        profileCourse.style.display = 'block';
+        editProfileForm.style.display = 'none';
+
+        
+    });
+    const editPrButton = document.getElementById('edit-pr');
+    const cancelProfileEdit = document.getElementById('cancelProfileEdit');
+    editPrButton.addEventListener('click' , ()=>{
+        editProfileForm.style.display = "flex"
+        txtD.style.display = "none"
+        img.style.display = "none"
+        profile4.style.display = "none"
+        cont.style.filter = "blur(20px)"
+        closeProfile.style.display = "none"
+        editPr.style.display = "none"
+    })
+    cancelProfileEdit.addEventListener('click' , ()=>{
+        cont.style.filter = "blur(0px)"
+        editProfileForm.style.display = "none"
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/sign.css">
+</head>
+<body>
+    <div class="body">
+        <header>
+            <nav>
+                <a href="login.html">Login</a>
+                <a href="index.html">
+                <img src="img/logo.png">
+                </a>
+                <a href="index.html">Home</a>
+            </nav>
+        </header>        
+        <div class="cont-all-form">
+            <div class="form-container">
+                <p class="title">Sign Up</p>
+                <form class="form">
+                    <div class="input-group">
+                        <label for="username">Full Name</label>
+                        <input type="text" name="username" id="username" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="username">Email</label>
+                        <input type="text" name="text" id="email" placeholder="">
+                        <p class="error" id="email-error">Invalid email</p>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="">
+                        <p class="error" id="pass-error">Please enter 6 characters password and uppercase letter</p>
+                    </div>
+    
+                    <button class="sign">Sign Up</button>
+                </form>
+                <p class="signup">Do you have an account?
+                    <a rel="noopener noreferrer" href="login.html" class="">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/signup.js"></script>
+</body>
+</html>

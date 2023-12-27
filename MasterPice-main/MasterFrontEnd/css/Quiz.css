@@ -1,0 +1,197 @@
+        .add {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+    display: flex;
+    justify-content: space-between;
+}
+.div-img {
+    display: flex;
+    justify-content: center;
+}
+.conatiner-s-s {
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.cont-num {
+    background-color: var(--bg-1);
+    padding: 25px;
+    color: var(--bg-4);
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 20px;
+}
+.cont-num i {
+    font-size: 40px;
+    color: var(--bg-3);
+}
+.cont-num h2{
+    padding: 10px 0px;
+}
+.bd-all {
+    width: 80%;
+}
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--bg-1);
+  width: 100%;
+}
+
+#customers td, #customers th {
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: var(--bg-3);}
+
+#customers tr:hover {background-color: var(--bg-4);}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--bg-1);
+  color: white;
+}
+
+.brd {
+    height: 100px;
+    /* border: 1px solid var(--bg-4); */
+    margin: 10px 50px 0px 0px;
+}
+.cont-filter {
+    display: flex;
+    justify-content: space-around;
+    background: var(--bg-1);
+    color: var(--bg-4);
+    align-items: center;
+    padding: 5px;
+    margin: 10px 50px 0px 0px;
+}
+.cont-filter label {
+    display: flex;
+}
+.cont-filter input {
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 7px;
+    background:var(--bg-4);
+    color: var(--bg-1);
+}
+.cont-filter button , #ccccc{
+    padding: 7px;
+    border: none;
+    background-color: var(--bg-4);
+    color: var(--bg-1);
+}
+.add {
+    position: absolute;
+    top: 0%;
+    background: linear-gradient(90deg, rgba(56,95,132,1) 0%, rgba(155,190,200,1) 100%);
+    width: 500px;
+    height: 110vh;
+    right: 0px;
+    transform: translateY(-2000px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-4);
+    border-radius: 10px;
+    
+}
+.add h4 {
+    color: var(--bg-4);
+    padding: 50px 0px 5px 0px;
+}
+/* .container {
+    background: #000000ad;
+} */
+.button {
+    border: none;
+    padding: 5px;
+    background: transparent;
+    color: var(--bg-2);
+    cursor: pointer;
+    border: 1px solid var(--bg-2);
+}
+.button:hover {
+    color: var(--bg-1);
+    border: 1px solid var(--bg-1);
+}
+#button {
+    border: none;
+    padding: 5px;
+    background: transparent;
+    color: var(--bg-4);
+    cursor: pointer;
+    border: 1px solid var(--bg-4);
+    margin-top: 30px;
+}
+#button:hover {
+    color: var(--bg-3);
+    border: 1px solid var(--bg-3);
+}
+.inp {
+    padding: 3px;
+    color: var(--bg-4);
+    border: 1px solid var(--bg-4);
+    background: transparent;
+    font-size: 17px;
+    outline: var(--bg-3);
+}
+#adddd , #ccccc {
+    cursor: pointer;
+}
+.closeDiv {
+    display: flex;
+    width: 90%;
+    margin-top: 1.7em;
+    justify-content: space-between;
+}
+.aab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+}
+#allq {
+    height: auto;
+    padding: 5px;
+    width: 100%;
+}
+#course-id , #teacher-id {
+    color: black;
+}
+.addUserFormQ {
+    display: flex;
+    justify-content: space-between;
+}
+#qust {
+    width: 900px;
+    height: 600px;
+    background: var(--bg-1);
+    position: absolute;
+    top: 13%;
+    right: 17.5%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#qust h4 {
+    color: var(--bg-5);
+    font-size: 15px;
+    margin: 20px;
+    width: 240px;
+
+
+}

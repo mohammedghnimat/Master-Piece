@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <style type='text/css'>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                color: black;
+                display: table;
+                font-family: Georgia, serif;
+                font-size: 24px;
+                text-align: center;
+                background: aliceblue;
+            }
+            .container {
+                border: 20px solid royalblue;
+                width: 750px;
+                height: 563px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .logo {
+                color: royalblue;
+            }
+
+            .marquee {
+                color: royalblue;
+                font-size: 48px;
+                margin: 20px;
+            }
+            .assignment {
+                margin: 20px;
+            }
+            .person {
+                border-bottom: 2px solid black;
+                font-size: 32px;
+                font-style: italic;
+                margin: 20px auto;
+                width: 400px;
+            }
+            .reason {
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                eEduMaster
+            </div>
+
+            <div class="marquee">
+                Certification from the eEduMaster platform            </div>
+
+            <div class="assignment">
+                This certificate is presented to
+            </div>
+
+            <div id="profileName" class="person">
+                
+            </div>
+
+            <div class="reason">
+                We wish you a life full of successes
+
+            </div>
+              <div class="reason">
+                I passed and got a certificate in
+                 <span style="color: royalblue;">
+                    math
+                </span>
+            </div>
+        </div>
+        <script>
+             
+
+             document.addEventListener('DOMContentLoaded', function () {
+        const comp = {
+            profileName: document.getElementById('profileName'),
+        };
+
+        // Retrieve user data from sessionStorage
+        const userData = {
+            USERNAME: sessionStorage.getItem("username"),
+        };
+
+        // Display user profile information
+        displayUserProfile(userData);
+
+        // Function to display user profile information
+        function displayUserProfile(userData) {
+            comp.profileName.textContent = userData.USERNAME;
+        }
+    });
+        </script>
+    </body>
+</html>

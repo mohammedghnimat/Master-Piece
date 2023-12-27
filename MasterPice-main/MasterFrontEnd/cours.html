@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElEarning</title>
+    <style>
+        .card
+         {
+            z-index: 999;
+        }
+        .card:hover 
+       {
+        transform:scale(1.04);
+       }
+    </style>
+</head>
+<body>
+    <div id="cont" class="container">
+        <div style="border-radius: 20px;" class="navbar">
+            <div>
+                <img src="./img/logo.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="li-p"><a href="index.html"><span><i class="fa-solid fa-house"></i></span>HOME</a></li>
+                    <li class="li-p"><a href="cours.html"> <span><i class="fa-solid fa-graduation-cap"></i></span> COURSES</a></li>
+                    <li class="li-p"><a href="index.html"> <span><i class="fa-solid fa-school"></i></span> ABOUT</a></li>
+                    <li class="li-p"><a href="contact.html"><span><i class="fa-solid fa-blender-phone"></i>CONTACT</span></a></li>
+                    <li style="padding-bottom: 10px;" class="li-p"><a href="calc.html"> <span><i class="fa-solid fa-calculator"></i></span> CALCULATOR</a></li>
+                    <div class="btn-all">
+                        <a id="LogOut" class="link-nav" style="margin-top: 3em;" href="index.html">LogOut</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="body-all">
+            <div class="continer-courses">
+                <div id="cardd" class="card">
+                    <a href="m/Math.html">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                        <h3>MATH</h3>
+                        <a href="m/Math.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/Chemistry.html">
+                        <i class="fa-solid fa-flask-vial"></i>                   
+                        <h3>chemistry</h3>
+                        <a href="m/Chemistry.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/Earth.html">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <h3>Earth sciences</h3>
+                        <a href="m/Earth.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/Coding.html">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Coding</h3>
+                        <a href="m/Coding.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/Physics.html">
+                        <i class="fa-solid fa-atom"></i>
+                        <h3>Physics</h3>
+                        <a href="m/Physics.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/Biology.html">
+                        <i class="fa-solid fa-dna"></i>
+                        <h3>Biology</h3>
+                        <a href="m/Biology.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/History.html">
+                        <i class="fa-solid fa-landmark"></i>
+                        <h3>history</h3>
+                        <a href="m/History.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/Arabic.html">
+                        <i class="fa-solid fa-hourglass"></i>
+                        <h3>Arabic Language</h3>
+                        <a href="m/Arabic.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+                <div id="cardd" class="card">
+                    <a href="m/English.html">
+                        <i class="fa-solid fa-e"></i>
+                        <h3>English Language</h3>
+                        <a href="m/English.html" class="btn2">
+                            More
+                        </a>
+                    </a>
+                </div>
+            </div>
+            </div>
+            </div>
+            <script>
+        const videos = document.querySelectorAll('.vedio');
+        const showButtons = document.querySelectorAll('.show-button');
+        const hideButtons = document.querySelectorAll('.hide-button');
+
+        showButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                videos[index].style.height = "auto";
+                videos[index].style.padding = "20px"; 
+                hideButtons[index].style.display = "flex";
+                showButtons[index].style.display = "none";
+            });
+        });
+
+        hideButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                videos[index].style.height = "0";
+                videos[index].style.padding = "0";
+                hideButtons[index].style.display = "none";
+                showButtons[index].style.display = "flex";
+            });
+        });
+
+        videos.forEach((video, index) => {
+            video.addEventListener('transitionend', () => {
+                if (video.style.height !== "0px") {
+                    video.style.height = "auto";
+                }
+            });
+        });
+        if (!sessionStorage.getItem('isLoggedIn')) {
+            window.location.href = "login.html"
+        }
+
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+        const LogOut = document.getElementById('LogOut')
+        LogOut.addEventListener('click' , ()=>{
+    const isLoggedIn = sessionStorage.clear();
+    
+    })
+      const help = document.getElementById('help')
+      help.addEventListener('click' , ()=>{
+        alert('If you are facing any problems, contact the developers on the contact page')
+      })
+   </script>
+</body>
+</html>

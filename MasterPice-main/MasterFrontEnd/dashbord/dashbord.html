@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/edit.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashbord</title>
+    <style>
+        *{
+    font-family: 'Montserrat', sans-serif;
+        }
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.conatiner-s-s {
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.cont-num {
+    background-color: var(--bg-1);
+    padding: 25px;
+    color: var(--bg-4);
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 20px;
+}
+.cont-num i {
+    font-size: 40px;
+    color: var(--bg-3);
+}
+.cont-num h2{
+    padding: 10px 0px;
+}
+.bd-all {
+    width: 80%;
+}
+body {
+    height: 100vh;
+    /* overflow: hidden; */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div>
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="li-p"> <a href="dashbord.html"> <span><i class="fa-solid fa-inbox"></i></span>Chart</a></li>
+                    <li class="li-p"> <a href="dashbordT.html"> <span><i class="fa-solid fa-person-chalkboard"></i></span>Teacher</a></li>
+                    <li  class="li-p"> <a href="dashbordS.html"><span><i class="fa-solid fa-graduation-cap"></i></span> Student</a></li>
+                    <li style="padding-bottom: 10px;" class="li-p"><a href="../calc.html"> <span><i class="fa-solid fa-calculator"></i></span> CALCULATOR</a></li>
+                    <div class="btn-all">
+                        <li style="margin-top: 20px;" class="btn-1"><a href="../index.html">Go to Home</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="bd-all">
+            <div id="cont-s-s" class="conatiner-s-s">
+             
+            </div>
+            <div style="width: 1000px;">
+                <canvas id="myChart"></canvas>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+            const eventContainer = document.querySelector('#cont-s-s');
+
+            Promise.all([
+                fetch('http://localhost/MasterPiece/AdminDashboard/CrudCourse/numStudCour.php').then(response => response.json()),
+                fetch('http://localhost/MasterPiece/AdminDashboard/CrudCourse/numTeahcer.php').then(response => response.json()),
+                fetch('http://localhost/MasterPiece/AdminDashboard/CrudCourse/numCorse.php').then(response => response.json())
+            ]).then(([studentCount, teacherCount, courseCount]) => {
+                const ctx = document.getElementById('myChart');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Student', 'Teacher', 'Courses'],
+                        datasets: [{
+                            label: 'Count',
+                            data: [studentCount, teacherCount, courseCount],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }).catch(error => console.error('Error:', error));
+        });
+document.addEventListener("DOMContentLoaded", function () {
+    const eventContainer = document.querySelector('#cont-s-s');
+    fetch('http://localhost/MasterPiece/AdminDashboard/CrudCourse/numStudCour.php')
+                .then(response => response.json())
+                .then(data => {
+                    eventContainer.innerHTML += `
+                            <div class="cont-num">
+                                <span><i class="fa-solid fa-graduation-cap"></i></span>
+                                <h2>Student</h2>
+                                <h4>${data}</h4>
+                            </div>
+                    `;
+                })
+                .catch(error => console.error('Error:', error));
+                fetch('http://localhost/MasterPiece/AdminDashboard/CrudCourse/numTeahcer.php')
+                .then(response => response.json())
+                .then(data => {
+                    eventContainer.innerHTML += `
+                            <div class="cont-num">
+                                <span><i class="fa-solid fa-person-chalkboard"></i></span>
+                                <h2>Teaher</h2>
+                                <h4>${data}</h4>
+                            </div>
+                    `;
+                })
+                .catch(error => console.error('Error:', error));
+                fetch('http://localhost/MasterPiece/AdminDashboard/CrudCourse/numCorse.php')
+                .then(response => response.json())
+                .then(data => {
+                    eventContainer.innerHTML += `
+                            <div class="cont-num">
+                                <span><i class="fa-solid fa-file"></i></span>
+                                <h2>Courses</h2>
+                                <h4>${data}</h4>
+                            </div>
+                    `;
+                })
+                .catch(error => console.error('Error:', error));
+            });
+    </script>
+</body>
+</html>

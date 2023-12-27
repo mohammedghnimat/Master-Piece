@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/Quiz.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/responsev.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/edit.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    
+</head>
+<body>
+    <form style="border-radius: 10px;" class="editProfileForm" id="editProfileForm">
+        <input type="text" id="profileNameInput" placeholder="Enter Name">
+        <input type="email" id="profileEmailInput" placeholder="Enter Email">
+        <input type="password" id="profilePasswordInput" placeholder="Enter Password">
+        <button class="link-nav" type="submit" id="saveProfileChanges">Save</button>
+        <button class="link-nav" id="cancelProfileEdit">Cancel</button>
+    </form>
+    <button id="btn-nav-open" class="btn-nav-open"><i class="fa-solid fa-bars"></i></button>
+    <div id="cont" class="container">
+        <div id="navbar" class="navbar">
+            <div class="div-img">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="li-p"> <a href="../index.html"> <span><i class="fa-solid fa-inbox"></i></span>Home</a></li>
+                    <li  class="li-p"> <a href="dashbordSt.html"><span><i class="fa-solid fa-graduation-cap"></i></span> Student</a></li>
+                    <li class="li-p"><a href="../calc.html"> <span><i class="fa-solid fa-calculator"></i></span> CALCULATOR</a></li>
+                    <li  style="padding-bottom: 10px;" class="li-p"><a id="btn-pr" href="#"> <span><i class="fa-solid fa-user"></i></span> Profile</a></li>     
+                
+                      <div class="ft">
+                        <li class="li-pp"> <a href="AddVedio.html"> <span><i class="fa-solid fa-video"></i></span>Add video & File</a></li>
+                    <li  style="padding-bottom: 10px;" class="li-p"><a href="AddQuiz.html"> <span><i class="fa-solid fa-pencil"></i></span> Add Quizzes</a></li>     
+                </div>
+                    <div class="btn-all">
+                        <li style="margin-top: 20px;" class="btn-1"><a href="../index.html">Go to Home</a></li>
+                        <li style="margin-top: 20px;"><button class="btn-nav-openn" id="close-nav">Close</button></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="bd-all">
+           <div class="cont-filter">
+            <h2>All Question</h2>
+            <label>
+                <input type="search" id="searchInput" placeholder="Search...">
+                <button onclick="searchStudents()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </label>
+            <div>
+                <button id="adddd">ADD QUESTION</button>
+                <button id="addddd">ADD QUIZ</button>
+            </div>
+        </div>
+        <div class="brd">
+            <table id="customers">
+                <tr>
+                    <!-- <th>Course</th> -->
+                      <th>Quiz Name</th>
+                      <th>QuizID</th>
+                      <th>All Question</th>
+                    </tr>
+                  </table>
+                      </div>
+        </div>
+    </div>
+    <div id="all" class="add">
+        <form id="addUserForm">
+
+            <h1>Add Question</h1>
+            <div class="src-text-vedio">
+                <h4>Quiz Name</h4>
+                <select id="Quiz" class="inp" name="course">
+                    <!-- Options will be dynamically loaded here -->
+                  </select>
+            </div>
+         
+            <div class="src-text-vedio">
+                <h4>Question</h4>
+                <input id="question" class="inp" type="text" name="username">
+            </div>
+            <div class="aab">
+                <div class="src-text-vedio">
+                    <h4>Answer1</h4>
+                    <input id="answer1" class="inp" type="text" name="email">
+                </div>
+                <div class="src-text-vedio">
+                    <h4>Answer2</h4>
+                    <input id="answer2" class="inp" type="text" name="password">
+                </div>
+                <div class="src-text-vedio">
+                    <h4>Answer3</h4>
+                    <input id="answer3" class="inp" type="text" name="password">
+                </div>
+                <div class="src-text-vedio">
+                    <h4>Answer4</h4>
+                    <input id="answer4" class="inp" type="text" name="password">
+                </div>
+            </div>
+            <div class="src-text-vedio">
+                <h4>Correct Answer</h4>
+                <input id="answerC" class="inp" type="text" name="password">
+            </div>
+            <button type="submit" id="button" class="button">Add Question</button>
+        </form>
+        <div class="closeDiv">
+            <div></div>
+            <button id="ccccc">CLOSE</button>
+        </div>
+    </div>
+    <div id="allq" class="add">
+        <form id="addUserFormQ">
+    <h1>Add Quiz</h1>    
+        <div style="    display: flex;
+        justify-content: space-evenly;" class="src-text-vedio">
+            <div class="src-text-vedio">
+                <h4>Name Quiz</h4>
+                <input id="nqu" style="background: transparent; outline: none; padding: 10px; border: solid 1px var(--bg-4); color: var(--bg-4);" type="text">
+            </div>
+        </div>
+        <button type="submit" id="button" class="button">Add Quiz</button>
+        <div style="width: 90vw;" class="closeDiv">
+            <div></div>
+            <button id="ccccc" class="cccccq">CLOSE</button>
+        </div>
+    </form>
+</div>
+<div id="profile" class="profile">
+
+   
+</div>
+    <span class="a">
+        <div id="qust">
+            <button style="
+            bottom: 20px;
+            position: absolute;
+            right: 20px;
+            border: none;
+            width: 100px;
+            " id="btn-close-qus" class="btn-1">CLOSE</button>
+        </div>
+        
+    </span>
+    <script src="../js/profile.js"></script>
+    <script src="../js/menuNavbar.js"></script>
+    <script src="../js/addQ.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/responsev.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/edit.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        .container {
+    display: flex;
+    justify-content: space-between;
+}
+.conatiner-s-s {
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.cont-num {
+    background-color: var(--bg-1);
+    padding: 25px;
+    color: var(--bg-4);
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 20px;
+}
+.cont-num i {
+    font-size: 40px;
+    color: var(--bg-3);
+}
+.cont-num h2{
+    padding: 10px 0px;
+}
+.bd-all {
+    width: 80%;
+}
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--bg-1);
+  width: 100%;
+}
+
+#customers td, #customers th {
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: var(--bg-3);}
+
+#customers tr:hover {background-color: var(--bg-4);}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--bg-1);
+  color: white;
+}
+
+.brd {
+    height: 100px;
+    /* border: 1px solid var(--bg-4); */
+    margin: 10px 50px 0px 0px;
+}
+.cont-filter {
+    display: flex;
+    justify-content: space-around;
+    background: var(--bg-1);
+    color: var(--bg-4);
+    align-items: center;
+    padding: 5px;
+    margin: 10px 50px 0px 0px;
+}
+.cont-filter label {
+    display: flex;
+}
+.cont-filter input {
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 7px;
+    background:var(--bg-4);
+    color: var(--bg-1);
+}
+.cont-filter button , #ccccc{
+    padding: 7px;
+    border: none;
+    background-color: var(--bg-4);
+    color: var(--bg-1);
+}
+.add {
+    position: absolute;
+    top: 0%;
+    background: linear-gradient(90deg, rgba(56,95,132,1) 0%, rgba(155,190,200,1) 100%);
+    width: 500px;
+    height: 100vh;
+    right: 0px;
+    transform: translateY(-2000px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-4);
+    border-radius: 10px;
+    
+}
+.add h4 {
+    color: var(--bg-4);
+    padding: 50px 0px 5px 0px;
+}
+/* .container {
+    background: #000000ad;
+} */
+.button {
+    border: none;
+    padding: 5px;
+    background: transparent;
+    color: var(--bg-2);
+    cursor: pointer;
+    border: 1px solid var(--bg-2);
+}
+.button:hover {
+    color: var(--bg-1);
+    border: 1px solid var(--bg-1);
+}
+#button {
+    border: none;
+    padding: 5px;
+    background: transparent;
+    color: var(--bg-4);
+    cursor: pointer;
+    border: 1px solid var(--bg-4);
+    margin-top: 30px;
+}
+#button:hover {
+    color: var(--bg-3);
+    border: 1px solid var(--bg-3);
+}
+.inp {
+    padding: 3px;
+    color: var(--bg-4);
+    border: 1px solid var(--bg-4);
+    background: transparent;
+    font-size: 17px;
+    outline: var(--bg-3);
+}
+#adddd , #ccccc {
+    cursor: pointer;
+}
+.closeDiv {
+    display: flex;
+    width: 90%;
+    margin-top: 20em;
+    justify-content: space-between;
+}
+    </style>
+</head>
+<body> 
+    <form style="border-radius: 10px;" class="editProfileForm" id="editProfileForm">
+        <input type="text" id="profileNameInput" placeholder="Enter Name">
+        <input type="email" id="profileEmailInput" placeholder="Enter Email">
+        <input type="password" id="profilePasswordInput" placeholder="Enter Password">
+        <button class="link-nav" type="submit" id="saveProfileChanges">Save</button>
+        <button class="link-nav" id="cancelProfileEdit">Cancel</button>
+    </form>
+    <button id="btn-nav-open" class="btn-nav-open"><i class="fa-solid fa-bars"></i></button>
+    <div id="cont" class="container">
+        <div id="navbar" class="navbar">
+            <div class="div-img">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="li-p"> <a href="../index.html"> <span><i class="fa-solid fa-inbox"></i></span>Home</a></li>
+                    <li  class="li-p"> <a href="dashbordSt.html"><span><i class="fa-solid fa-graduation-cap"></i></span> Student</a></li>
+                    <li class="li-p"><a href="../calc.html"> <span><i class="fa-solid fa-calculator"></i></span> CALCULATOR</a></li>
+                    <li  style="padding-bottom: 10px;" class="li-p"><a id="btn-pr" href="#"> <span><i class="fa-solid fa-user"></i></span> Profile</a></li>     
+                
+                      <div class="ft">
+                        <li class="li-pp"> <a href="AddVedio.html"> <span><i class="fa-solid fa-video"></i></span>Add video & File</a></li>
+                    <li  style="padding-bottom: 10px;" class="li-p"><a href="AddQuiz.html"> <span><i class="fa-solid fa-pencil"></i></span> Add Quizzes</a></li>     
+                </div>
+                    <div class="btn-all">
+                        <li style="margin-top: 20px;" class="btn-1"><a href="../index.html">Go to Home</a></li>
+                        <li style="margin-top: 20px;"><button class="btn-nav-openn" id="close-nav">Close</button></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="bd-all">
+           <div class="cont-filter">
+            <h2>All Student</h2>
+            <label>
+                <input type="search" id="searchInput" placeholder="Search...">
+                <button onclick="searchStudents()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </label>
+          
+        </div>
+        <div class="brd">
+            <table id="customers">
+                <tr>
+                      <th>Name</th>
+                      <th>email</th>
+                      <th>password</th>
+                    </tr>
+                  
+                  </table>
+                      </div>
+        </div>
+    </div>
+    <div id="all" class="add">
+        <form id="addUserForm">
+
+            <h1>Add Student</h1>
+            <div class="src-text-vedio">
+                <h4>Name Student</h4>
+                <input id="name-st" class="inp" type="text" name="username">
+            </div>
+            <div class="src-text-vedio">
+                <h4>Email Student</h4>
+                <input id="email-em" class="inp" type="text" name="email">
+            </div>
+            <div class="src-text-vedio">
+                <h4>Password</h4>
+                <input id="pass-ps" class="inp" type="text" name="password">
+            </div>
+            <button type="submit" id="button" class="button">Add Student</button>
+        </form>
+        <div class="closeDiv">
+            <div></div>
+            <button id="ccccc">CLOSE</button>
+        </div>
+    </div>
+    <div id="profile" class="profile">
+    </div>
+    <script src="../js/menuNavbar.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/readStDU.js">
+     
+    </script>
+    
+</body>
+</html>

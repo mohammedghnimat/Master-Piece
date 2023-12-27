@@ -1,0 +1,80 @@
+:root {
+    --bg-1 : #769FCD ;
+    --bg-2 : #B9D7EA ;
+    --bg-3 : #D6E6F2 ;
+    --bg-4 : #F7FBFC ;
+    --bg-5 : #1B262C ;
+}
+        /* Start Section One */
+        .section-two {
+            height: 100vh;
+            background-color: var(--bg-1);
+        }
+        .section-two h1 {
+            padding-top:50px ;
+            font-size: 40px;
+            color: var(--bg-4);
+            text-align: center;
+         }
+         .continer-courses {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 80%;
+        }
+         .section-two .card{
+            background-color: var(--bg-4);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+        }
+        .section-two a {
+            text-decoration: none;
+        }
+        .section-two .card h3 {
+            color: var(--bg-1);
+            padding: 30px;
+        }
+        .section-two .card i{ 
+            color: var(--bg-1);
+            font-size: 90px;
+        }
+        /* End Section Two */
+        /* Start Section Three */
+        .section-three {
+            padding: 3em 0em;
+            background-color: var(--bg-3);
+        }
+        .section-three h1{
+            padding-top:50px ;
+            font-size: 40px;
+            color: var(--bg-5);
+            text-align: center;
+        }
+        .contianer-three-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .contianer-three-section img {
+            width: 300px;
+            border-radius: 20px;
+        }
+        .text-three {
+            width: 60%;
+        }
+        .img-three {
+            display: flex;
+            justify-content: center;
+            width: 30%;
+        }
+        #p5 {
+            padding: 3em 0em;
+        }
+        #p5 {
+            color: var(--bg-4);
+            background: var(--bg-1);
+        }
+        /* End Section (About) */

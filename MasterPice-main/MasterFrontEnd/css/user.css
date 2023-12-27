@@ -1,0 +1,116 @@
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 50px;
+}
+.body-all {
+    margin: 10px;
+    color: white;
+}
+.cont-vedio {
+    background: rgb(66,125,157);
+    background: radial-gradient(circle, rgba(66,125,157,1) 0%, rgba(155,190,200,1) 100%);
+}
+.vedio-out {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-1);
+    border-radius: 20px;
+    
+}
+.hide-button {
+    display: none;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: var(--bg-4);
+    color: var(--bg-1);
+}
+  .show-button {
+    color: var(--bg-1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: var(--bg-4);
+}
+.show-button2 {
+    color: var(--bg-1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: var(--bg-4);
+    cursor: pointer;
+}
+.vedio-cont {
+    background-color: var(--bg-1);
+    padding: 10px;
+    color: var(--bg-4);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+    
+}
+.hdr-vedio {
+    display: flex;
+    justify-content: space-between;
+}
+.vedio {
+    height: 0;
+    transition: .5s;
+}
+
+.fl-p {
+    padding-top: 20px;
+}
+.bg {
+    background-image: url(../img/wallpaper-login.png);
+    border-radius: 20px;
+}
+.bg-2 {
+    background: #000;
+}
+.cont-all-vedio {
+    width: 40%;
+}
+body {
+    background: rgba(66, 125, 157, 0.56);
+    background: radial-gradient(circle, rgba(66, 125, 157, 0.427) 0%, rgba(155, 190, 200, 0.334) 100%);
+} h1 {
+    padding-top:5px ;
+    font-size: 40px;
+    color: var(--bg-4);
+ }
+ .continer-courses {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 80%;
+}
+ .card{
+    background-color: var(--bg-2);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    height: 262px;
+    margin-top: 20px;
+} a {
+    text-decoration: none;
+} .card h3 {
+    color: var(--bg-4);
+    padding: 30px;
+    text-transform: uppercase;
+}
+.card i{ 
+    color: var(--bg-4);
+    font-size: 90px;
+}
